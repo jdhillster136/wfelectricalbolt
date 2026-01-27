@@ -19,10 +19,18 @@ const rupertMuseumImages = [
   '/whatsapp_image_2026-01-27_at_20.40.14_(1).jpeg',
 ];
 
+const lainsbergClinicImages = [
+  '/whatsapp_image_2026-01-27_at_20.40.30.jpeg',
+  '/whatsapp_image_2026-01-27_at_20.40.31_(1).jpeg',
+  '/whatsapp_image_2026-01-27_at_20.40.31_(3).jpeg',
+  '/whatsapp_image_2026-01-27_at_20.40.31.jpeg',
+  '/whatsapp_image_2026-01-27_at_20.40.30_(2).jpeg',
+];
+
 const Gallery: React.FC = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
-  const allImages = [...residentialImages, ...rupertMuseumImages];
+  const allImages = [...residentialImages, ...rupertMuseumImages, ...lainsbergClinicImages];
 
   useEffect(() => {
     if (lightboxOpen) {
@@ -104,6 +112,27 @@ const Gallery: React.FC = () => {
                 <img
                   src={img}
                   alt={`Rupert Museum project ${index + 1}`}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mb-12">
+          <h2 className="text-3xl font-display font-bold text-brand-dark mb-8">Lainsberg Clinic</h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {lainsbergClinicImages.map((img, index) => (
+              <div
+                key={index}
+                className="group relative overflow-hidden rounded-2xl bg-stone-200 aspect-[4/3] shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer"
+                onClick={() => handleImageClick(residentialImages.length + rupertMuseumImages.length + index)}
+              >
+                <img
+                  src={img}
+                  alt={`Lainsberg Clinic project ${index + 1}`}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
                 />
