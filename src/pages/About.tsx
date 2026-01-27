@@ -38,9 +38,9 @@ const About: React.FC = () => {
             {/* Image Composition */}
             <div className="w-full md:w-1/2 relative">
                <div className="absolute -top-4 -left-4 w-24 h-24 bg-brand-primary/10 rounded-full z-0"></div>
-               <img 
-                 src="https://images.unsplash.com/photo-1544724569-5f546fd6dd2d?q=80&w=2000&auto=format&fit=crop" 
-                 alt="W&F Electrical Team Discussion" 
+               <img
+                 src="/pexels-cristian-rojas-8853536.jpg"
+                 alt="W&F Electrical Team Discussion"
                  className="relative z-10 w-full h-[400px] object-cover rounded-2xl shadow-xl grayscale-[10%]"
                  loading="lazy"
                />
