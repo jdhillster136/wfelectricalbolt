@@ -4,15 +4,14 @@ import React from 'react';
 
 export const COMPANY_NAME = "W&F Electrical Contractors";
 export const PHONE_LANDLINE = "+27 21 761 3956";
-export const PHONE_CELL = "084 713 1405";
+export const PHONE_CELL = "084 703 9449";
 export const FAX = "+27 21 761 3941";
 export const EMAIL_INFO = "info@wfelectrical.co.za";
 export const EMAIL_SALES = "sales@wfelectrical.co.za";
 export const EMAIL = EMAIL_INFO;
 
 // WhatsApp Link (Direct to chat)
-// Note: Prompt asked to link to 021 761 3956. Ensure format is international without + or spaces.
-export const WHATSAPP_LINK = "https://wa.me/27217613956"; 
+export const WHATSAPP_LINK = "https://wa.me/27847039449"; 
 
 export const NAV_ITEMS: NavItem[] = [
   { label: 'Home', path: '/' },
