@@ -4,7 +4,6 @@ import { Menu, X, Facebook } from 'lucide-react';
 import { NAV_ITEMS, COMPANY_NAME, CONTACT_DETAILS } from '../constants';
 import Button from './Button';
 import FloatingWhatsApp from './FloatingWhatsApp';
-import Certifications from './Certifications';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -108,8 +107,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <main className="flex-grow pt-0">
         {children}
       </main>
-
-      <Certifications />
 
       {/* Footer */}
       <footer
