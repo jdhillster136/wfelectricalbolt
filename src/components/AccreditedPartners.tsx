@@ -45,7 +45,7 @@ const AccreditedPartners: React.FC = () => {
           </div>
           <div className="h-20 flex items-center justify-center">
             <img
-              src="/9f611420-e264-4cc2-b42a-9ff992e97127.jpg"
+              src="/9f611420-e264-4cc2-b42a-9ff992e97127 copy copy.jpg"
               alt="Central Supplier Database"
               className="max-h-20 max-w-full object-contain filter hover:drop-shadow-lg transition-all"
               loading="lazy"
