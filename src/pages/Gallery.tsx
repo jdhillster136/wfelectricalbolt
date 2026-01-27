@@ -1,61 +1,37 @@
 import React, { useState, useEffect } from 'react';
 import SEO from '../components/SEO';
 import AccreditedPartners from '../components/AccreditedPartners';
-import CategoryFilter from '../components/CategoryFilter';
-import GalleryGrid from '../components/GalleryGrid';
-import GalleryLightbox from '../components/GalleryLightbox';
-import { supabase, GalleryCategory, GalleryImage } from '../lib/supabase';
+import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+
+const residentialImages = [
+  '/whatsapp_image_2026-01-27_at_20.40.48_(1) copy copy copy.jpeg',
+  '/whatsapp_image_2026-01-27_at_20.40.48 copy copy copy.jpeg',
+  '/whatsapp_image_2026-01-27_at_20.40.49_(1) copy copy copy.jpeg',
+  '/whatsapp_image_2026-01-27_at_20.40.50_(1) copy copy copy.jpeg',
+  '/whatsapp_image_2026-01-27_at_20.40.47 copy copy copy.jpeg',
+];
 
 const Gallery: React.FC = () => {
-  const [categories, setCategories] = useState<GalleryCategory[]>([]);
-  const [images, setImages] = useState<GalleryImage[]>([]);
-  const [filteredImages, setFilteredImages] = useState<GalleryImage[]>([]);
-  const [activeCategory, setActiveCategory] = useState<number | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
 
   useEffect(() => {
-    fetchGalleryData();
-  }, []);
+    if (lightboxOpen) {
+      const handleKeyDown = (e: KeyboardEvent) => {
+        if (e.key === 'Escape') setLightboxOpen(false);
+        if (e.key === 'ArrowLeft') handleLightboxNavigate('prev');
+        if (e.key === 'ArrowRight') handleLightboxNavigate('next');
+      };
 
-  useEffect(() => {
-    if (activeCategory === null) {
-      setFilteredImages(images);
-    } else {
-      setFilteredImages(images.filter(img => img.category_id === activeCategory));
+      window.addEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = 'hidden';
+
+      return () => {
+        window.removeEventListener('keydown', handleKeyDown);
+        document.body.style.overflow = 'unset';
+      };
     }
-  }, [activeCategory, images]);
-
-  const fetchGalleryData = async () => {
-    try {
-      setLoading(true);
-      setError(null);
-
-      const { data: categoriesData, error: categoriesError } = await supabase
-        .from('gallery_categories')
-        .select('*')
-        .order('display_order', { ascending: true });
-
-      if (categoriesError) throw categoriesError;
-
-      const { data: imagesData, error: imagesError } = await supabase
-        .from('gallery_images')
-        .select('*')
-        .order('display_order', { ascending: true });
-
-      if (imagesError) throw imagesError;
-
-      setCategories(categoriesData || []);
-      setImages(imagesData || []);
-    } catch (err) {
-      console.error('Error fetching gallery data:', err);
-      setError('Failed to load gallery. Please try again later.');
-    } finally {
-      setLoading(false);
-    }
-  };
+  }, [lightboxOpen]);
 
   const handleImageClick = (index: number) => {
     setLightboxIndex(index);
@@ -64,9 +40,9 @@ const Gallery: React.FC = () => {
 
   const handleLightboxNavigate = (direction: 'prev' | 'next') => {
     if (direction === 'prev') {
-      setLightboxIndex((prev) => (prev > 0 ? prev - 1 : filteredImages.length - 1));
+      setLightboxIndex((prev) => (prev > 0 ? prev - 1 : residentialImages.length - 1));
     } else {
-      setLightboxIndex((prev) => (prev < filteredImages.length - 1 ? prev + 1 : 0));
+      setLightboxIndex((prev) => (prev < residentialImages.length - 1 ? prev + 1 : 0));
     }
   };
 
@@ -85,51 +61,26 @@ const Gallery: React.FC = () => {
           </p>
         </div>
 
-        {loading && (
-          <div className="text-center py-20">
-            <div className="inline-block h-12 w-12 animate-spin rounded-full border-4 border-solid border-brand-primary border-r-transparent"></div>
-            <p className="mt-4 text-brand-secondary">Loading gallery...</p>
-          </div>
-        )}
+        <div className="mb-12">
+          <h2 className="text-3xl font-display font-bold text-brand-dark mb-8">Residential Projects</h2>
 
-        {error && (
-          <div className="text-center py-20">
-            <p className="text-red-600 text-lg">{error}</p>
-            <button
-              onClick={fetchGalleryData}
-              className="mt-4 px-6 py-3 bg-brand-primary text-white rounded-full hover:bg-brand-accent transition-colors"
-            >
-              Try Again
-            </button>
-          </div>
-        )}
-
-        {!loading && !error && (
-          <>
-            {categories.length > 0 && (
-              <CategoryFilter
-                categories={categories}
-                activeCategory={activeCategory}
-                onCategoryChange={setActiveCategory}
-              />
-            )}
-
-            {filteredImages.length === 0 && !loading && (
-              <div className="text-center py-20">
-                <p className="text-brand-secondary text-lg">
-                  No projects to display yet. Check back soon for updates!
-                </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {residentialImages.map((img, index) => (
+              <div
+                key={index}
+                className="group relative overflow-hidden rounded-2xl bg-stone-200 aspect-[4/3] shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer"
+                onClick={() => handleImageClick(index)}
+              >
+                <img
+                  src={img}
+                  alt={`Residential project ${index + 1}`}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
               </div>
-            )}
-
-            {filteredImages.length > 0 && (
-              <GalleryGrid
-                images={filteredImages}
-                onImageClick={handleImageClick}
-              />
-            )}
-          </>
-        )}
+            ))}
+          </div>
+        </div>
 
         <div className="mt-24">
           <AccreditedPartners />
@@ -137,12 +88,47 @@ const Gallery: React.FC = () => {
       </div>
 
       {lightboxOpen && (
-        <GalleryLightbox
-          images={filteredImages}
-          currentIndex={lightboxIndex}
-          onClose={() => setLightboxOpen(false)}
-          onNavigate={handleLightboxNavigate}
-        />
+        <div className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center animate-fade-in">
+          <button
+            onClick={() => setLightboxOpen(false)}
+            className="absolute top-4 right-4 z-10 p-3 bg-white/10 hover:bg-white/20 rounded-full transition-colors duration-200"
+            aria-label="Close"
+          >
+            <X className="w-6 h-6 text-white" />
+          </button>
+
+          <button
+            onClick={() => handleLightboxNavigate('prev')}
+            className="absolute left-4 z-10 p-3 bg-white/10 hover:bg-white/20 rounded-full transition-colors duration-200"
+            aria-label="Previous image"
+          >
+            <ChevronLeft className="w-6 h-6 text-white" />
+          </button>
+
+          <button
+            onClick={() => handleLightboxNavigate('next')}
+            className="absolute right-4 z-10 p-3 bg-white/10 hover:bg-white/20 rounded-full transition-colors duration-200"
+            aria-label="Next image"
+          >
+            <ChevronRight className="w-6 h-6 text-white" />
+          </button>
+
+          <div className="max-w-7xl max-h-[90vh] mx-4">
+            <img
+              src={residentialImages[lightboxIndex]}
+              alt={`Residential project ${lightboxIndex + 1}`}
+              className="max-w-full max-h-[85vh] object-contain rounded-lg"
+            />
+            <div className="text-center mt-2 text-white/70 text-sm">
+              {lightboxIndex + 1} of {residentialImages.length}
+            </div>
+          </div>
+
+          <div
+            className="absolute inset-0 -z-10"
+            onClick={() => setLightboxOpen(false)}
+          />
+        </div>
       )}
     </div>
   );
