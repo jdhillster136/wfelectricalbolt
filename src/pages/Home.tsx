@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react';
 import { Shield, CheckCircle, Zap, Clock, ArrowRight, Star } from 'lucide-react';
 import Button from '../components/Button';
 import SEO from '../components/SEO';
-import AccreditedPartners from '../components/AccreditedPartners';
 import { WHATSAPP_LINK } from '../constants';
 import { Link } from 'react-router-dom';
 
@@ -192,8 +191,6 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
-
-      <AccreditedPartners />
 
       {/* CTA SECTION - Parallax Strip */}
       <section className="relative py-32 bg-brand-dark flex items-center overflow-hidden">

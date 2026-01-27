@@ -2,7 +2,6 @@ import React from 'react';
 import { CONTACT_DETAILS } from '../constants';
 import ContactForm from '../components/ContactForm';
 import SEO from '../components/SEO';
-import AccreditedPartners from '../components/AccreditedPartners';
 
 const Contact: React.FC = () => {
   return (
@@ -70,9 +69,6 @@ const Contact: React.FC = () => {
           </div>
         </div>
 
-        <div className="mt-24">
-          <AccreditedPartners />
-        </div>
       </div>
     </div>
   );

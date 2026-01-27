@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Home, Factory, Wrench, FileCheck, Gauge, Zap, ArrowRight, Plus, Minus, HelpCircle } from 'lucide-react';
 import Button from '../components/Button';
 import SEO from '../components/SEO';
-import AccreditedPartners from '../components/AccreditedPartners';
 
 const services = [
   {
@@ -183,8 +182,6 @@ const Services: React.FC = () => {
             ))}
           </div>
         </div>
-
-        <AccreditedPartners />
 
         {/* Call to Action Bar */}
         <div className="mt-24 bg-brand-dark rounded-3xl p-12 text-center relative overflow-hidden">
