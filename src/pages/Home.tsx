@@ -47,14 +47,14 @@ const Home: React.FC = () => {
               - Width set to 110vw and positioned -5vw left to create a safety bleed on edges.
               - This prevents any blank lines on the sides during resizing or on specific aspect ratios.
            */}
-           <div 
+           <div
              ref={parallaxRef}
              className="absolute -top-[20%] -left-[5vw] w-[110vw] h-[140%] will-change-transform"
            >
              <div className="absolute inset-0 bg-stone-900/50 z-10"></div>
-             <img 
-               src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2700&auto=format&fit=crop" 
-               alt="Modern luxury home lighting" 
+             <img
+               src="/pexels-kelly-33622084 copy.jpg"
+               alt="Cape Town cityscape at night with Table Mountain"
                className="w-full h-full object-cover object-center"
                loading="eager"
              />
