@@ -62,21 +62,76 @@ const About: React.FC = () => {
             {/* Narrative */}
             <div className="w-full md:w-1/2 space-y-6">
                <h2 className="text-3xl font-display font-bold text-brand-dark">A Legacy of Light in Cape Town</h2>
-               <div className="prose prose-stone text-brand-secondary font-light text-lg leading-relaxed">
+               <div className="prose prose-stone text-brand-secondary font-light text-lg leading-relaxed space-y-6">
                  <p>
-                   Established in 2005 by Deon Fraser and Ralph Small, W&F Electrical Contractors was born from a vision to deliver exceptional electrical service in Cape Town. What began as two founders and a general worker has grown into a thriving team of fifteen professionals, backed by over 30 years of combined industry experience. Every project is personally overseen by Deon and Ralph, ensuring the same dedication that launched the company continues today.
+                   W&F Electrical was founded in 2005 by industry professionals who had built extensive experience working for established electrical firms. After developing strong relationships with architects and main contractors, the founders established the company to offer dedicated service. They began with a small team and quickly grew by delivering solid performance on every contract, building trust with institutional, commercial, and government clients. Over the years, the business has expanded its capabilities while maintaining a commitment to technical excellence, safety, and strong client relationships.
                  </p>
                  <p>
-                   We've built our reputation on three pillars: <strong className="text-brand-dark font-semibold">Integrity, Honesty, and Reliability</strong>. In an industry where quality is often a rumor, we've invested in the right tools, machinery, and knowledge to set a genuinely high standard. From residential fault-finding to complex industrial installations, our workmanship speaks for itself.
+                   From early beginnings, W&F Electrical has established itself as a trusted specialist in electrical installations, maintenance, inspections, and compliance services — with a focus on delivering technically excellent work on every project. The company's commitment to safety, quality, and professional execution has enabled it to build long-term relationships with architects, main contractors, consultants, and major clients.
                  </p>
-                 <p>
+
+                 <div className="pt-4">
+                   <h3 className="text-xl font-bold text-brand-dark mb-4 uppercase tracking-wide">Our Experience & Completed Government / Institutional Projects</h3>
+                   <p className="mb-4">
+                     W&F Electrical has successfully executed a portfolio of noteworthy electrical projects through main contractors for government departments and institutional clients. The company's project experience highlights its ability to deliver on large-scale, complex assignments:
+                   </p>
+
+                   <div className="space-y-4 text-base">
+                     <div>
+                       <h4 className="font-bold text-brand-dark mb-2">DEPARTMENT OF HEALTH PROJECTS</h4>
+                       <ul className="list-disc list-inside space-y-1 ml-2">
+                         <li>Zolani Clinic – Electrical installations and services</li>
+                         <li>Mowbray Maternity Clinic – Current electrical works</li>
+                       </ul>
+                     </div>
+
+                     <div>
+                       <h4 className="font-bold text-brand-dark mb-2">DEPARTMENT OF EDUCATION</h4>
+                       <p className="mb-2">W&F Electrical has completed multiple educational infrastructure projects, including:</p>
+                       <ul className="list-disc list-inside space-y-1 ml-2">
+                         <li>Witzenberg Primary School</li>
+                         <li>Langa High School</li>
+                         <li>Nomlinganiselo Primary School</li>
+                         <li>Northpine Primary School</li>
+                         <li>Steenberg Secondary Music Classroom</li>
+                         <li>Tafelsig Secondary School</li>
+                         <li>Lwazi Primary School</li>
+                         <li>Van Der Ross Primary School</li>
+                         <li>Sir Lowry's Pass Primary School</li>
+                         <li>Pelican Primary School</li>
+                         <li>Poly Oak New Tool Room</li>
+                         <li>Pinehurst Club House, Swimming Centre & Wash Bay</li>
+                         <li>Many additional primary and secondary school electrical projects</li>
+                       </ul>
+                     </div>
+
+                     <div>
+                       <h4 className="font-bold text-brand-dark mb-2">INSTITUTIONAL WORK</h4>
+                       <ul className="list-disc list-inside space-y-1 ml-2">
+                         <li>UCT Classroom Renewal Project – University of Cape Town</li>
+                         <li>UCT GSH Lecture Rooms – University of Cape Town</li>
+                         <li>UCT Oceanography – University of Cape Town</li>
+                         <li>Kaplan Centre UCT – Ongoing project</li>
+                       </ul>
+                     </div>
+
+                     <div>
+                       <h4 className="font-bold text-brand-dark mb-2">COMMERCIAL & URBAN</h4>
+                       <ul className="list-disc list-inside space-y-1 ml-2">
+                         <li>V&A Waterfront – South Facility</li>
+                         <li>V&A Waterfront – North Facility</li>
+                         <li>V&A Waterfront – Lookout Open Parking</li>
+                         <li>Belvedere Square Electrical Reticulation</li>
+                         <li>Paarl Refuse Transfer Station & Mess Building</li>
+                         <li>Various commercial and mixed-use electrical works</li>
+                       </ul>
+                     </div>
+                   </div>
+                 </div>
+
+                 <p className="pt-4">
                    Today, as a <strong className="text-brand-dark font-semibold">Level 2 B-BBEE Contributor</strong>, we are proud to play a role in our country's economic growth while delivering world-class service. Whether it's a complex industrial installation or a residential compliance check, our story is written in every successful connection we make.
                  </p>
-               </div>
-               
-               <div className="pt-4 flex items-center gap-4">
-                 <div className="w-12 h-1 bg-brand-primary rounded-full"></div>
-                 <span className="text-sm font-bold text-brand-dark uppercase tracking-widest">Deon Fraser & Ralph Small</span>
                </div>
             </div>
           </div>
