@@ -28,7 +28,7 @@ const About: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           {/* CHANGED: Yellow accent badge */}
           <span className="inline-block py-1 px-3 border border-brand-accent rounded-full text-brand-dark bg-brand-accent/10 text-xs font-bold uppercase tracking-widest mb-6">
-            Since 2012 • Cape Town
+            Since 2005 • Cape Town
           </span>
           <h1 className="text-5xl md:text-7xl font-display font-bold text-brand-dark mb-8 tracking-tight leading-[1.1]">
             We Power Your <br />
