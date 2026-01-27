@@ -48,7 +48,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <div className="flex justify-between items-center">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3 group">
-              <img src="/logo.png" alt="W&F Electrical" className="h-14 w-auto object-contain" />
+              <img src="/logo copy.png" alt="W&F Electrical" className="h-14 w-auto object-contain" />
               <div className="flex flex-col hidden sm:block">
                 <span className="text-xl font-display font-bold tracking-tight leading-none text-brand-dark">W&F</span>
                 <span className="text-[10px] font-bold tracking-widest uppercase text-brand-primary">Electrical</span>
@@ -128,7 +128,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             {/* Brand Column */}
             <div className="space-y-6">
               <div className="flex items-center gap-3">
-                <img src="/logo.png" alt="W&F Electrical" className="h-16 w-auto object-contain" />
+                <img src="/logo copy.png" alt="W&F Electrical" className="h-16 w-auto object-contain" />
                 <div className="flex flex-col">
                   <span className="text-2xl font-display font-bold text-white">W&F</span>
                   <span className="text-xs font-bold tracking-widest uppercase text-brand-primary">Electrical</span>
