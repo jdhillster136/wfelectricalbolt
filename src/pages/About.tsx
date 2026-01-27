@@ -157,27 +157,27 @@ const About: React.FC = () => {
          <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
          
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="max-w-4xl mx-auto">
               <div>
                 {/* CHANGED: Yellow Label */}
                 <span className="text-brand-accent font-bold uppercase tracking-widest text-xs mb-2 block">Our DNA</span>
                 <h2 className="text-4xl md:text-5xl font-display font-bold mb-8">What Sets Us Apart</h2>
                 <div className="space-y-8">
                   {[
-                    { 
-                      icon: <Users className="w-6 h-6 text-brand-dark" />, 
-                      title: "Client-Centric Approach", 
-                      text: "We understand that electrical work can be disruptive. We respect your time and property, ensuring neat workmanship and clear communication." 
+                    {
+                      icon: <Users className="w-6 h-6 text-brand-dark" />,
+                      title: "Client-Centric Approach",
+                      text: "We understand that electrical work can be disruptive. We respect your time and property, ensuring neat workmanship and clear communication."
                     },
-                    { 
-                      icon: <HardHat className="w-6 h-6 text-brand-dark" />, 
-                      title: "Safety Obsessed", 
-                      text: "There is no compromise when it comes to electricity. We follow SANS 10142-1 regulations strictly to protect your family and employees." 
+                    {
+                      icon: <HardHat className="w-6 h-6 text-brand-dark" />,
+                      title: "Safety Obsessed",
+                      text: "There is no compromise when it comes to electricity. We follow SANS 10142-1 regulations strictly to protect your family and employees."
                     },
-                    { 
-                      icon: <Ruler className="w-6 h-6 text-brand-dark" />, 
-                      title: "Precision Engineering", 
-                      text: "From complex industrial DB boards to residential lighting layouts, we apply mathematical precision to every circuit we design." 
+                    {
+                      icon: <Ruler className="w-6 h-6 text-brand-dark" />,
+                      title: "Precision Engineering",
+                      text: "From complex industrial DB boards to residential lighting layouts, we apply mathematical precision to every circuit we design."
                     }
                   ].map((item, idx) => (
                     <div key={idx} className="flex gap-5">
@@ -190,23 +190,6 @@ const About: React.FC = () => {
                       </div>
                     </div>
                   ))}
-                </div>
-              </div>
-              
-              <div className="relative">
-                <div className="absolute -inset-4 bg-brand-primary/20 rounded-full blur-3xl"></div>
-                <img
-                  src="/pexels-kelly-33622084.jpg"
-                  alt="Cape Town at Night"
-                  className="relative rounded-2xl shadow-2xl border border-stone-700 h-[500px] object-cover"
-                  loading="lazy"
-                />
-                <div className="absolute -bottom-6 right-6 bg-stone-800 p-6 rounded-xl border border-stone-700 shadow-xl max-w-xs z-20">
-                  <div className="flex gap-1 mb-2">
-                    {[1,2,3,4,5].map(i => <Quote key={i} className="w-3 h-3 text-brand-accent fill-current" />)}
-                  </div>
-                  <p className="text-sm font-light italic text-stone-300">"W&F Electrical transformed our factory's power efficiency. Highly recommended."</p>
-                  <p className="text-xs font-bold text-brand-primary mt-3 uppercase tracking-wider">— Commercial Client</p>
                 </div>
               </div>
             </div>
