@@ -102,8 +102,8 @@ const Home: React.FC = () => {
             <div className="relative">
               <div className="absolute top-0 right-0 w-2/3 h-full bg-stone-200/50 -translate-y-6 translate-x-6 z-0 rounded-2xl"></div>
               <img
-                src="/women_standing_working_about_page.jpg"
-                alt="Electrician working on electrical panel"
+                src="/women_standing_working_about_page copy.jpg"
+                alt="W&F electrician installing electrical panel"
                 className="relative z-10 w-full h-[500px] object-cover shadow-xl rounded-2xl grayscale-[20%]"
                 loading="lazy"
               />
