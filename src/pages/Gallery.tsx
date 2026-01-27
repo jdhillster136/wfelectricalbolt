@@ -1,5 +1,6 @@
 import React from 'react';
 import SEO from '../components/SEO';
+import AccreditedPartners from '../components/AccreditedPartners';
 
 const projects = [
   { id: 1, title: "Modern Villa Lighting", category: "Residential", img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2700&auto=format&fit=crop" },
@@ -29,9 +30,9 @@ const Gallery: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <div key={project.id} className="group relative overflow-hidden rounded-2xl bg-stone-200 aspect-[4/3] shadow-md hover:shadow-xl transition-all duration-300">
-              <img 
-                src={project.img} 
-                alt={project.title} 
+              <img
+                src={project.img}
+                alt={project.title}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 loading="lazy"
               />
@@ -46,6 +47,10 @@ const Gallery: React.FC = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-24">
+          <AccreditedPartners />
         </div>
       </div>
     </div>

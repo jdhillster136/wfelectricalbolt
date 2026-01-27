@@ -2,6 +2,7 @@ import React from 'react';
 import { CONTACT_DETAILS } from '../constants';
 import ContactForm from '../components/ContactForm';
 import SEO from '../components/SEO';
+import AccreditedPartners from '../components/AccreditedPartners';
 
 const Contact: React.FC = () => {
   return (
@@ -67,6 +68,10 @@ const Contact: React.FC = () => {
             <h2 className="text-2xl font-display font-bold text-brand-dark mb-8">Send a Message</h2>
             <ContactForm />
           </div>
+        </div>
+
+        <div className="mt-24">
+          <AccreditedPartners />
         </div>
       </div>
     </div>
