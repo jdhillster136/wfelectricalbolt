@@ -48,7 +48,7 @@ const About: React.FC = () => {
             <div className="w-full md:w-1/2 relative">
                <div className="absolute -top-4 -left-4 w-24 h-24 bg-brand-primary/10 rounded-full z-0"></div>
                <img
-                 src="/pexels-cristian-rojas-8853536.jpg"
+                 src="/filler_image copy.jpg"
                  alt="W&F Electrical Team Discussion"
                  className="relative z-10 w-full h-[400px] object-cover rounded-2xl shadow-xl grayscale-[10%]"
                  loading="lazy"
