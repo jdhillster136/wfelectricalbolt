@@ -14,8 +14,17 @@ const About: React.FC = () => {
       />
       
       {/* 1. Hero Section - Minimalist & Bold */}
-      <section className="pt-40 pb-20 bg-brand-light relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-stone-100/50 -skew-x-12 translate-x-1/4 z-0 pointer-events-none"></div>
+      <section className="pt-40 pb-20 relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/pexels-cristian-rojas-8853536 copy.jpg"
+            alt="Electrical professionals at work"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/90 to-white/70"></div>
+        </div>
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           {/* CHANGED: Yellow accent badge */}
           <span className="inline-block py-1 px-3 border border-brand-accent rounded-full text-brand-dark bg-brand-accent/10 text-xs font-bold uppercase tracking-widest mb-6">
