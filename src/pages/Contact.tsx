@@ -49,14 +49,14 @@ const Contact: React.FC = () => {
 
             {/* Google Map Embed */}
             <div className="bg-white p-2 rounded-2xl h-80 relative overflow-hidden shadow-sm border border-stone-200">
-              <iframe 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0, borderRadius: '0.75rem' }} 
-                loading="lazy" 
-                allowFullScreen 
+              <iframe
+                width="100%"
+                height="100%"
+                style={{ border: 0, borderRadius: '0.75rem' }}
+                loading="lazy"
+                allowFullScreen
                 referrerPolicy="no-referrer-when-downgrade"
-                src="https://maps.google.com/maps?q=Unit+14,+Plantation+Centre,+Plantation+Road,+Ottery,+7800&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                src="https://www.google.com/maps?q=Unit+14,+Plantation+Centre,+Plantation+Road,+Ottery,+7800&output=embed"
                 title="W&F Electrical Location"
               ></iframe>
             </div>
