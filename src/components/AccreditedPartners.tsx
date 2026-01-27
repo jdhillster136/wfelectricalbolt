@@ -13,7 +13,7 @@ const AccreditedPartners: React.FC = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 items-center justify-center">
           <div className="h-20 flex items-center justify-center">
             <img
-              src="/783733bb-708b-4d0a-bbc3-ebd4d0102f47 copy.jpg"
+              src="/783733bb-708b-4d0a-bbc3-ebd4d0102f47 copy copy.jpg"
               alt="NBCEI - National Black Contractors & Engineers Initiative"
               className="max-h-20 max-w-full object-contain filter hover:drop-shadow-lg transition-all"
               loading="lazy"
@@ -21,7 +21,7 @@ const AccreditedPartners: React.FC = () => {
           </div>
           <div className="h-20 flex items-center justify-center">
             <img
-              src="/a8954f86-cfd5-4e8f-b523-a4b8eb32beb5 copy.jpg"
+              src="/a8954f86-cfd5-4e8f-b523-a4b8eb32beb5 copy copy.jpg"
               alt="ECA - Electrical Contractors Association"
               className="max-h-20 max-w-full object-contain filter hover:drop-shadow-lg transition-all"
               loading="lazy"
@@ -29,7 +29,7 @@ const AccreditedPartners: React.FC = () => {
           </div>
           <div className="h-20 flex items-center justify-center">
             <img
-              src="/e46ad208-77c2-44a4-bf69-0887ff384a03 copy.jpg"
+              src="/e46ad208-77c2-44a4-bf69-0887ff384a03 copy copy.jpg"
               alt="Department of Labour - Republic of South Africa"
               className="max-h-20 max-w-full object-contain filter hover:drop-shadow-lg transition-all"
               loading="lazy"
@@ -37,7 +37,7 @@ const AccreditedPartners: React.FC = () => {
           </div>
           <div className="h-20 flex items-center justify-center">
             <img
-              src="/3d3997ab-2f49-4e30-8752-bcfe52198c58 copy.png"
+              src="/3d3997ab-2f49-4e30-8752-bcfe52198c58 copy copy.png"
               alt="CIDB - Construction Industry Development Board"
               className="max-h-20 max-w-full object-contain filter hover:drop-shadow-lg transition-all"
               loading="lazy"
@@ -45,7 +45,7 @@ const AccreditedPartners: React.FC = () => {
           </div>
           <div className="h-20 flex items-center justify-center">
             <img
-              src="/9f611420-e264-4cc2-b42a-9ff992e97127 copy.jpg"
+              src="/9f611420-e264-4cc2-b42a-9ff992e97127.jpg"
               alt="Central Supplier Database"
               className="max-h-20 max-w-full object-contain filter hover:drop-shadow-lg transition-all"
               loading="lazy"

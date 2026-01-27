@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '../components/Button';
 import SEO from '../components/SEO';
+import AccreditedPartners from '../components/AccreditedPartners';
 import { Award, ShieldCheck, Zap, Users, CheckCircle2, HardHat, Ruler, Quote } from 'lucide-react';
 
 const About: React.FC = () => {
@@ -228,6 +229,8 @@ const About: React.FC = () => {
           </div>
         </div>
       </section>
+
+      <AccreditedPartners />
 
     </div>
   );

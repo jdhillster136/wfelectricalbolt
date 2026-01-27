@@ -1,5 +1,6 @@
 import React from 'react';
 import SEO from '../components/SEO';
+import AccreditedPartners from '../components/AccreditedPartners';
 
 const projects = [
   { id: 1, title: "Modern Villa Lighting", category: "Residential", img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2700&auto=format&fit=crop" },
@@ -48,6 +49,9 @@ const Gallery: React.FC = () => {
           ))}
         </div>
 
+        <div className="mt-24">
+          <AccreditedPartners />
+        </div>
       </div>
     </div>
   );
