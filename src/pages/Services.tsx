@@ -35,7 +35,7 @@ const services = [
     title: "Pre-Paid Meters",
     desc: "Take control of electricity consumption with our sub-metering solutions. Ideal for landlords and property managers, we supply and install reliable pre-paid meters to ensure accurate billing and usage monitoring.",
     features: ["Single Phase Pre-paid Meters", "3-Phase Pre-paid Meters", "Landlord/Tenant Sub-metering", "Tamper-proof Installations", "Usage Monitoring"],
-    img: "/pexels-pixabay-257736.jpg"
+    img: "/pexels-pixabay-257736 copy.jpg"
   },
   {
     id: 'backup',
