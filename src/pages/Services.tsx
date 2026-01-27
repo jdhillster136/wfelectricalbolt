@@ -43,7 +43,7 @@ const services = [
     title: "Inverters & Power Backup",
     desc: "Don't let load shedding stop your life or business. We install professional backup solutions, from generator change-over switches to integrated inverter systems, keeping your essential appliances running.",
     features: ["Inverter Installations", "Generator Change-over Switches", "UPS Integration", "Surge Protection", "Battery Backup Wiring"],
-    img: "/20230905_114417-scaled.jpg"
+    img: "/20230905_114417-scaled copy.jpg"
   }
 ];
 
