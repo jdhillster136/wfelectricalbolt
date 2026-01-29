@@ -34,10 +34,18 @@ const totalGarageImages = [
   '/whatsapp_image_2026-01-27_at_20.41.04.jpeg',
 ];
 
+const middelPosPrimarySchoolImages = [
+  '/whatsapp_image_2026-01-27_at_22.45.25.jpeg',
+  '/whatsapp_image_2026-01-27_at_22.45.27.jpeg',
+  '/whatsapp_image_2026-01-27_at_22.45.28.jpeg',
+  '/whatsapp_image_2026-01-27_at_22.45.30.jpeg',
+  '/whatsapp_image_2026-01-27_at_22.45.26.jpeg',
+];
+
 const Gallery: React.FC = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
-  const allImages = [...residentialImages, ...rupertMuseumImages, ...lainsbergClinicImages, ...totalGarageImages];
+  const allImages = [...residentialImages, ...rupertMuseumImages, ...lainsbergClinicImages, ...totalGarageImages, ...middelPosPrimarySchoolImages];
 
   useEffect(() => {
     if (lightboxOpen) {
@@ -161,6 +169,27 @@ const Gallery: React.FC = () => {
                 <img
                   src={img}
                   alt={`Total Garage project ${index + 1}`}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mb-12">
+          <h2 className="text-3xl font-display font-bold text-brand-dark mb-8">Middel Pos Primary School</h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {middelPosPrimarySchoolImages.map((img, index) => (
+              <div
+                key={index}
+                className="group relative overflow-hidden rounded-2xl bg-stone-200 aspect-[4/3] shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer"
+                onClick={() => handleImageClick(residentialImages.length + rupertMuseumImages.length + lainsbergClinicImages.length + totalGarageImages.length + index)}
+              >
+                <img
+                  src={img}
+                  alt={`Middel Pos Primary School project ${index + 1}`}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
                 />
