@@ -42,10 +42,18 @@ const middelPosPrimarySchoolImages = [
   '/whatsapp_image_2026-01-27_at_22.45.26.jpeg',
 ];
 
+const deDoormsEmsImages = [
+  '/whatsapp_image_2026-01-27_at_22.44.50_(1).jpeg',
+  '/whatsapp_image_2026-01-27_at_22.44.50.jpeg',
+  '/whatsapp_image_2026-01-27_at_22.44.51.jpeg',
+  '/whatsapp_image_2026-01-27_at_22.44.49_(1).jpeg',
+  '/whatsapp_image_2026-01-27_at_22.44.49.jpeg',
+];
+
 const Gallery: React.FC = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
-  const allImages = [...residentialImages, ...rupertMuseumImages, ...lainsbergClinicImages, ...totalGarageImages, ...middelPosPrimarySchoolImages];
+  const allImages = [...residentialImages, ...rupertMuseumImages, ...lainsbergClinicImages, ...totalGarageImages, ...middelPosPrimarySchoolImages, ...deDoormsEmsImages];
 
   useEffect(() => {
     if (lightboxOpen) {
@@ -190,6 +198,27 @@ const Gallery: React.FC = () => {
                 <img
                   src={img}
                   alt={`Middel Pos Primary School project ${index + 1}`}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mb-12">
+          <h2 className="text-3xl font-display font-bold text-brand-dark mb-8">De Doorms EMS</h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {deDoormsEmsImages.map((img, index) => (
+              <div
+                key={index}
+                className="group relative overflow-hidden rounded-2xl bg-stone-200 aspect-[4/3] shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer"
+                onClick={() => handleImageClick(residentialImages.length + rupertMuseumImages.length + lainsbergClinicImages.length + totalGarageImages.length + middelPosPrimarySchoolImages.length + index)}
+              >
+                <img
+                  src={img}
+                  alt={`De Doorms EMS project ${index + 1}`}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
                 />
