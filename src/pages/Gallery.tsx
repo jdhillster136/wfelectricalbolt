@@ -20,6 +20,7 @@ const rupertMuseumImages = [
 ];
 
 const lainsbergClinicImages = [
+  '/whatsapp_image_2026-01-27_at_22.44.27.jpeg',
   '/whatsapp_image_2026-01-27_at_20.40.30.jpeg',
   '/whatsapp_image_2026-01-27_at_20.40.31_(1).jpeg',
   '/whatsapp_image_2026-01-27_at_20.40.31_(3).jpeg',
