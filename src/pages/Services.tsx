@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Home, Factory, Wrench, FileCheck, Gauge, Zap, ArrowRight, Plus, Minus, HelpCircle } from 'lucide-react';
+import { Home, Factory, Wrench, FileCheck, Zap, ArrowRight, Plus, Minus, HelpCircle } from 'lucide-react';
 import Button from '../components/Button';
 import SEO from '../components/SEO';
 import AccreditedPartners from '../components/AccreditedPartners';
@@ -28,14 +28,6 @@ const services = [
     desc: "We provide robust electrical solutions for offices, factories, and retail spaces. Our commercial services focus on minimizing downtime and ensuring your infrastructure can handle high power loads safely.",
     features: ["3-Phase Power Installations", "Office Reticulation & Trunking", "Motor Controls & Isolators", "Warehouse Lighting", "Data & Telephone Points"],
     img: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=2301&auto=format&fit=crop"
-  },
-  {
-    id: 'meters',
-    icon: <Gauge className="w-10 h-10 text-brand-primary" />,
-    title: "Pre-Paid Meters",
-    desc: "Take control of electricity consumption with our sub-metering solutions. Ideal for landlords and property managers, we supply and install reliable pre-paid meters to ensure accurate billing and usage monitoring.",
-    features: ["Single Phase Pre-paid Meters", "3-Phase Pre-paid Meters", "Landlord/Tenant Sub-metering", "Tamper-proof Installations", "Usage Monitoring"],
-    img: "/pexels-pixabay-257736 copy.jpg"
   },
   {
     id: 'backup',
@@ -107,7 +99,7 @@ const Services: React.FC = () => {
       <SEO 
         title="Services" 
         description="Comprehensive electrical services: COC compliance certificates, fault finding, residential wiring, commercial maintenance, and inverter installations in Cape Town."
-        keywords="Electrical Services, COC Certificate Cape Town, Fault Finding Electrician, Inverter Installation Cape Town, Pre-paid Meters"
+        keywords="Electrical Services, COC Certificate Cape Town, Fault Finding Electrician, Inverter Installation Cape Town, Residential Electrical"
       />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
