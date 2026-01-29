@@ -1,18 +1,10 @@
 import React, { useState } from 'react';
-import { Home, Factory, Wrench, FileCheck, Zap, ArrowRight, Plus, Minus, HelpCircle } from 'lucide-react';
+import { Home, Factory, Wrench, Zap, ArrowRight, Plus, Minus, HelpCircle } from 'lucide-react';
 import Button from '../components/Button';
 import SEO from '../components/SEO';
 import AccreditedPartners from '../components/AccreditedPartners';
 
 const services = [
-  {
-    id: 'compliance',
-    icon: <FileCheck className="w-10 h-10 text-brand-primary" />,
-    title: "Certificates of Compliance (COC)",
-    desc: "As Department of Labour registered electricians, we conduct rigorous inspections to issue valid Electrical Certificates of Compliance. Whether you are selling your property, transferring a bond, or need insurance validation, we ensure your installation meets SANS 10142-1 standards.",
-    features: ["Property Transfer COCs", "Bond Registration", "Rectification of Electrical Faults", "Electric Fence COCs", "Insurance Verification"],
-    img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2670&auto=format&fit=crop"
-  },
   {
     id: 'residential',
     icon: <Home className="w-10 h-10 text-brand-primary" />,
@@ -96,10 +88,10 @@ const FAQItem = ({ question, answer }: { question: string, answer: string }) => 
 const Services: React.FC = () => {
   return (
     <div className="animate-fade-in pt-32 pb-20">
-      <SEO 
-        title="Services" 
-        description="Comprehensive electrical services: COC compliance certificates, fault finding, residential wiring, commercial maintenance, and inverter installations in Cape Town."
-        keywords="Electrical Services, COC Certificate Cape Town, Fault Finding Electrician, Inverter Installation Cape Town, Residential Electrical"
+      <SEO
+        title="Services"
+        description="Comprehensive electrical services: residential wiring, commercial maintenance, industrial installations, and inverter backup solutions in Cape Town."
+        keywords="Electrical Services Cape Town, Fault Finding Electrician, Inverter Installation Cape Town, Residential Electrical, Commercial Electrical"
       />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
