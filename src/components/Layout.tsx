@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Facebook } from 'lucide-react';
 import { NAV_ITEMS, COMPANY_NAME, CONTACT_DETAILS } from '../constants';
 import Button from './Button';
-import FloatingWhatsApp from './FloatingWhatsApp';
+import FloatingEmail from './FloatingEmail';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -215,7 +215,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         </div>
       </footer>
 
-      <FloatingWhatsApp />
+      <FloatingEmail />
     </div>
   );
 };

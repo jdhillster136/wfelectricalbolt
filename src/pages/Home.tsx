@@ -3,7 +3,7 @@ import { Shield, CheckCircle, Zap, Clock, ArrowRight, Star } from 'lucide-react'
 import Button from '../components/Button';
 import SEO from '../components/SEO';
 import AccreditedPartners from '../components/AccreditedPartners';
-import { WHATSAPP_LINK } from '../constants';
+import { EMAIL_LINK } from '../constants';
 import { Link } from 'react-router-dom';
 
 const Home: React.FC = () => {
@@ -82,8 +82,8 @@ const Home: React.FC = () => {
             <Button variant="primary" to="/contact" className="shadow-lg shadow-brand-primary/20">
               Request a Quote
             </Button>
-            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-brand-dark" to={WHATSAPP_LINK}>
-              Chat on WhatsApp
+            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-brand-dark" to={EMAIL_LINK}>
+              Email Us
             </Button>
           </div>
 
@@ -214,8 +214,8 @@ const Home: React.FC = () => {
             <Button variant="primary" to="/contact">
               Get in Touch
             </Button>
-            <Button variant="outline" className="border-stone-500 text-stone-300 hover:border-brand-accent hover:text-brand-accent" to={WHATSAPP_LINK}>
-              WhatsApp Us
+            <Button variant="outline" className="border-stone-500 text-stone-300 hover:border-brand-accent hover:text-brand-accent" to={EMAIL_LINK}>
+              Email Us
             </Button>
           </div>
         </div>

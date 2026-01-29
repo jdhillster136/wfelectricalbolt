@@ -10,8 +10,7 @@ export const EMAIL_INFO = "info@wfelectrical.co.za";
 export const EMAIL_SALES = "sales@wfelectrical.co.za";
 export const EMAIL = EMAIL_INFO;
 
-// WhatsApp Link (Direct to chat)
-export const WHATSAPP_LINK = "https://wa.me/27847039449"; 
+export const EMAIL_LINK = `mailto:${EMAIL_INFO}`; 
 
 export const NAV_ITEMS: NavItem[] = [
   { label: 'Home', path: '/' },

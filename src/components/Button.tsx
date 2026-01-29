@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'outline' | 'whatsapp';
+  variant?: 'primary' | 'secondary' | 'outline' | 'email';
   fullWidth?: boolean;
   icon?: boolean;
   to?: string; // If provided, behaves like a link
@@ -27,7 +27,7 @@ const Button: React.FC<ButtonProps> = ({
     primary: "bg-brand-primary text-white hover:bg-red-700 border border-transparent",
     secondary: "bg-brand-dark text-white hover:bg-stone-800 border border-brand-dark",
     outline: "bg-transparent text-brand-dark border-2 border-brand-dark hover:bg-brand-dark hover:text-white",
-    whatsapp: "bg-[#25D366] text-white hover:bg-[#20bd5a] border border-transparent rounded-full"
+    email: "bg-blue-600 text-white hover:bg-blue-700 border border-transparent rounded-full"
   };
 
   const widthStyle = fullWidth ? "w-full" : "";
